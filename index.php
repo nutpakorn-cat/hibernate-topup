@@ -4,19 +4,19 @@ $this->db->query("CREATE TABLE IF NOT EXISTS `tb_point` (
   `point_price` int(11) NOT NULL,
   `point_point` int(11) NOT NULL,
   PRIMARY KEY (`point_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=7 ;");
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=7 ;");
 $this->db->query("CREATE TABLE IF NOT EXISTS `tb_topup` (
   `topup_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `topup_name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `topup_point` int(11) NOT NULL,
   `topup_date` datetime NOT NULL,
   PRIMARY KEY (`topup_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;");
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;");
 $this->db->query("CREATE TABLE IF NOT EXISTS `tb_topup_setting` (
   `setting_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `topup_uid` int(11) NOT NULL,
   PRIMARY KEY (`setting_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;");
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;");
 $this->db->query("INSERT IGNORE INTO `tb_topup_setting` (`setting_id`, `topup_uid`) VALUES
 (1, 99999);
 ");
